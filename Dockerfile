@@ -16,6 +16,6 @@ FROM alpine
 WORKDIR /app
 COPY --from=builder /app/golang-test .
 
-ENTRYPOINT ["/app/golang-test"]
+CMD ["/app/golang-test"]
 
 EXPOSE 8000
