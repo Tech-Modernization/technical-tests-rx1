@@ -1,4 +1,4 @@
-FROM golang:alpine as builder
+FROM golang:1.12.5-alpine3.9 as builder
 
 ENV GO111MODULE=on
 
@@ -11,7 +11,7 @@ ADD ./ /app
 
 RUN go build -o golang-test .
 
-FROM alpine
+FROM alpine:3.9.4
 
 WORKDIR /app
 
